@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7C9C94F1-05D6-43BC-B8CB-78E1E593B8A1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WorkdayApi</RootNamespace>
+    <AssemblyName>WorkdayApi</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\WorkDayService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="EmployerDemography.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Connected Services\WorkDayService\Staffing.wsdl" />
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Add_Additional_JobOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Add_Additional_Job_Event_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Add_Retiree_StatusOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Add_Retiree_Status_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Assign_OrganizationOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Assign_Organization_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Assign_Organization_RolesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Assign_Organization_Roles_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Assign_RolesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Assign_Roles_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Change_JobOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Change_Job_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Change_Organization_AssignmentsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Change_Organization_Assignments_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Change_Work_SpaceOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Change_Work_Space_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Close_PositionOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Close_Position_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Contract_Contingent_WorkerOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Contract_Contingent_Worker_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Create_PositionOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Create_Position_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Delete_Worker_DocumentOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Delete_Worker_Document_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Edit_Employee_Contract_Additional_DataOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Edit_Employee_Contract_Additional_Data_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Edit_Hiring_RestrictionsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Edit_Hiring_Restrictions_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Edit_PositionOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Edit_Position_Event_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Edit_Position_RestrictionsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Edit_Position_Restrictions_Additional_DataOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Edit_Position_Restrictions_Additional_Data_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Edit_Positon_Restriction_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Edit_Service_DatesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Edit_Service_Dates_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Edit_Worker_Additional_DataOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Edit_Worker_Additional_Data_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.End_Additional_Employee_Job_Event_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.End_Additional_JobOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.End_Contingent_Worker_ContractOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.End_Contingent_Worker_Contract_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.End_International_AssignmentOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.End_International_Assignment_for_Employee_Event_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Freeze_PositionOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Freeze_Position_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_ApplicantsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Applicants_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Change_Government_IDsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Change_Government_IDs_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Change_Legal_NameOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Change_Legal_Name_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Change_LicensesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Change_Licenses_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Change_Other_IDsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Change_Other_IDs_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Change_Passports_and_VisasOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Change_Passports_and_Visas_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Change_Preferred_NameOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Change_Preferred_Name_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Citizenship_StatusesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Citizenship_Statuses_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Collective_AgreementsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Collective_Agreements_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Job_Classification_GroupsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Job_Classification_Groups_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Job_FamiliesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Job_Families_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Job_Family_GroupsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Job_Family_Groups_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Maintain_Notice_Periods_For_CountryOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Maintain_Notice_Periods_For_Country_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Maintain_Probation_Periods_For_CountryOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Maintain_Probation_Periods_For_Country_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Notice_PeriodsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Notice_Periods_for_Notice_Period_Target_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Notice_Period_Eligibility_RulesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Notice_Period_Eligibility_Rules_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_OrganizationsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Organizations_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_PositionsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Positions_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Probation_Periods_For_WorkersOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Probation_Periods_For_Workers_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Probation_Period_Eligibility_RulesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Probation_Period_Eligibility_Rules_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Probation_Period_OutcomesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Probation_Period_Outcomes_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Role_Assignments_For_Role_AssignersOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Role_Assignments_For_Role_Assigners_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Student_Employment_Eligibility_DataOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Student_Employment_Eligibility_Data_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Student_Employment_Eligibility_RulesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Student_Employment_Eligibility_Rules_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Student_Employment_Eligibility_Rule_SetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Student_Employment_Eligibility_Rule_Set_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_WorkersOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Workers_ResponseRootType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Worker_DocumentsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Get_Worker_Documents_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Hire_EmployeeOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Hire_Employee_Event_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Import_External_Student_InformationOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Maintain_Employee_ContractsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Maintain_Employee_Contracts_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Move_Workers_By_OrganizationOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Move_Workers_By_Organization_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.No_ShowOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.No_Show_Event_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_ApplicantOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Applicant_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Assign_Matrix_OrganizationOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Assign_Matrix_Organization_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Citizenship_StatusOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Citizenship_Status_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Collective_AgreementOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Collective_Agreement_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_DependentOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Dependent_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Edit_Notice_Periods_EventOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Edit_Notice_Periods_Event_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Hire_Event_Proposed_Worker_IDOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Hire_Event_Proposed_Worker_ID_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Import_Process_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Job_Classification_GroupOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Job_Classification_Group_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Job_FamilyOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Job_Family_GroupOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Job_Family_Group_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Job_Family_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Maintain_Notice_Periods_for_CountryOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Maintain_Notice_Periods_for_Country_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Maintain_Probation_Periods_For_CountryOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Maintain_Probation_Periods_For_Country_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Notice_Period_Eligibility_RuleOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Notice_Period_Eligibility_Rule_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Probation_Period_Eligibility_RuleOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Probation_Period_Eligibility_Rule_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Probation_Period_OutcomesOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Probation_Period_Outcomes_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Remove_Matrix_OrganizationOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Remove_Matrix_Organization_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Student_Employment_Eligibility_RuleOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Student_Employment_Eligibility_Rule_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Student_Employment_Eligibility_Rule_SetOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Student_Employment_Eligibility_Rule_Set_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Student_Employment_Eligibility_StatusOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Student_Employment_Eligibility_Status_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Worker_DocumentOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Put_Worker_Document_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Remove_Retiree_StatusOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Remove_Retiree_Status_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Set_Hiring_RestrictionsOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Set_Hiring_Restrictions_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Start_International_AssignmentOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Start_International_Assignment_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Switch_Primary_JobOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Switch_Primary_Job_Event_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Terminate_EmployeeOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WorkDayService\WorkdayApi.WorkDayService.Terminate_Employee_Event_ResponseType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\WorkDayService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WorkDayService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WorkDayService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WorkDayService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
